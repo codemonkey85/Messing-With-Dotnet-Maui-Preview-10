@@ -1,13 +1,4 @@
-﻿@using System.Net.Http
-@using Microsoft.AspNetCore.Components.Forms
-@using Microsoft.AspNetCore.Components.Routing
-@using Microsoft.AspNetCore.Components.Web
-@using Microsoft.AspNetCore.Components.Web.Virtualization
-@using Microsoft.JSInterop
-@using MauiApp1
-@using MauiApp1.Shared
-
-<Router AppAssembly="@GetType().Assembly">
+﻿<Router AppAssembly="@GetType().Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
     </Found>

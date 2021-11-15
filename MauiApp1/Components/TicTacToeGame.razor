@@ -1,0 +1,31 @@
+﻿<div class="container">
+    <h1>Tic-Tac-Toe</h1>
+    @if (!isGameOver)
+    {
+        <h2>Current turn: @CurrentPlayerName</h2>
+    }
+    @if (isGameOver)
+    {
+        @if (GameIsTied)
+        {
+            <h2 style="color:red;">Game is tied!</h2>
+        }
+        else
+        {
+            <h2 style="color:red;">Winner is @WinnerName!</h2>
+        }
+    }
+    <h2>Number of turns so far: @turnNumber</h2>
+    <div class="play-area">
+        <div id="square0" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square0"))">@Square0Content</div>
+        <div id="square1" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square1"))">@Square1Content</div>
+        <div id="square2" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square2"))">@Square2Content</div>
+        <div id="square3" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square3"))">@Square3Content</div>
+        <div id="square4" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square4"))">@Square4Content</div>
+        <div id="square5" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square5"))">@Square5Content</div>
+        <div id="square6" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square6"))">@Square6Content</div>
+        <div id="square7" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square7"))">@Square7Content</div>
+        <div id="square8" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square8"))">@Square8Content</div>
+    </div>
+    <button class="btn btn-danger" @onclick="@ResetBoard">RESET BOARD</button>
+</div>
